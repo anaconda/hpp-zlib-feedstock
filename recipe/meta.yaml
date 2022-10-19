@@ -1,4 +1,4 @@
-{% set version = "1.2.12" %}
+{% set version = "1.2.13" %}
 
 package:
     name: zlib
@@ -6,7 +6,7 @@ package:
 
 source:
     url: http://zlib.net/zlib-{{ version }}.tar.gz
-    sha256: 91844808532e5ce316b3c010929493c0244f3d37593afd6de04f71821d5136d9
+    sha256: b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30
     patches:
         - cmake-pkg-config.patch
         # Both patches are needed to remediate CVE-2022-37434; the "-1" patch
@@ -15,8 +15,8 @@ source:
         # been adopted by Debian and SUSE as fixes for the vulnerability.
         # We're following Debian's pattern and keeping these patches separate
         # (rather than consolidating them) to keep their provenance clear.
-        - CVE-2022-37434-1.patch
-        - CVE-2022-37434-2.patch
+        # - CVE-2022-37434-1.patch (extremly suspicious patch ... )
+        # - CVE-2022-37434-2.patch
 
 build:
     number: 3
