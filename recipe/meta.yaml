@@ -9,14 +9,6 @@ source:
     sha256: b3a24de97a8fdbc835b9833169501030b8977031bcb54b3b3ac13740f846ab30
     patches:
         - cmake-pkg-config.patch
-        # Both patches are needed to remediate CVE-2022-37434; the "-1" patch
-        # had a bug that broke downstream packages like `curl`, which was
-        # addressed in the "-2" patch. As of 2022-09-07, these patches have
-        # been adopted by Debian and SUSE as fixes for the vulnerability.
-        # We're following Debian's pattern and keeping these patches separate
-        # (rather than consolidating them) to keep their provenance clear.
-        # - CVE-2022-37434-1.patch (extremly suspicious patch ... )
-        # - CVE-2022-37434-2.patch
 
 build:
     number: 0
