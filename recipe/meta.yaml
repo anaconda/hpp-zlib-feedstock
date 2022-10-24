@@ -19,7 +19,7 @@ source:
         # - CVE-2022-37434-2.patch
 
 build:
-    number: 3
+    number: 0
     run_exports:
         # mostly OK, but some scary symbol removal.  Let's try for trusting them.
         #    https://abi-laboratory.pro/tracker/timeline/zlib/
